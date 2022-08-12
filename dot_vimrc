@@ -57,6 +57,7 @@ call plug#begin()
   Plug 'mileszs/ack.vim'
   Plug 'vim-scripts/Colour-Sampler-Pack'
   Plug 'bronson/vim-trailing-whitespace'
+  Plug 'dense-analysis/ale'
 call plug#end()
 
 ""
@@ -89,6 +90,17 @@ let g:ctrlp_custom_ignore = {
   \ 'dir':  '\v[\/]\.(git|hg|svn)$|node_modules|deps|_build',
   \ 'file': '\v\.(exe|so|dll|pyo|rbc|rbo|class|o)$',
   \ }
+
+let g:ale_linters = {
+  \ 'javascript': ['eslint'],
+  \ 'ruby': ['rubocop'],
+  \}
+
+let g:ale_fixers = {
+  \ '*': ['remove_trailing_lines', 'trim_whitespace'],
+  \ 'javascript': ['eslint'],
+  \ 'ruby': ['rubocop'],
+  \}
 
 ""
 "" Plugins setup
