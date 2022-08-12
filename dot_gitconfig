@@ -1,12 +1,12 @@
 [pull]
-	rebase = false
+  rebase = false
 [user]
-	name = Alejandro Gutiérrez
-	email = alejandrodevs@gmail.com
+  name = Alejandro Gutiérrez
+  email = alejandrodevs@gmail.com
 [core]
-	editor = vim
+  editor = vim
 [alias]
-	co = checkout
-	br = branch
-	ci = commit
-	st = status
+  co = checkout
+  br = branch
+  ci = commit
+  st = status
