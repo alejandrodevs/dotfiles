@@ -1,0 +1,95 @@
+""
+"" Basic setup
+""
+
+set nocompatible
+filetype plugin on
+ret number            "  Show line numbers
+set ruler             "  Show line and column number
+syntax enable         "  Turn on syntax highlighting allowing local overrides
+set splitright        "  Split windows vertically to the right
+set splitbelow        "  Split windows horizontally below the current
+set colorcolumn=80    "  Add mark when the line reaches 80 chars.
+set guifont=Menlo:h18 "  Sets font family and size
+
+""
+"" Whitespace
+""
+
+set nowrap       "  don't wrap lines
+set tabstop=2    "  a tab is two spaces
+set shiftwidth=2 "  an autoindent (with <<) is two spaces
+set expandtab    "  use spaces, not tabs
+set list         "  Show invisible characters
+
+""
+"" List chars
+""
+
+set listchars=""          "  Reset the listchars
+set listchars=tab:\ \     "  a tab should display as '  ', trailing whitespace as '.'
+set listchars+=trail:.    "  show trailing spaces as dots
+set listchars+=extends:»  "  char shown when line goes beyond the right of the screen
+set listchars+=precedes:« "  char shown when line goes beyond the left of the screen
+
+""
+"" Plugins
+""
+
+call plug#begin()
+  Plug 'preservim/nerdtree'
+  Plug 'preservim/tagbar'
+  Plug 'godlygeek/tabular'
+  Plug 'scrooloose/nerdcommenter'
+  Plug 'tpope/vim-fugitive'
+  Plug 'tpope/vim-surround'
+  Plug 'tpope/vim-unimpaired'
+  Plug 'tpope/vim-endwise'
+  Plug 'ervandew/supertab'
+  Plug 'tomtom/tlib_vim'
+  Plug 'MarcWeber/vim-addon-mw-utils'
+  Plug 'garbas/vim-snipmate'
+  Plug 'honza/vim-snippets'
+  Plug 'ap/vim-css-color'
+  Plug 'kien/ctrlp.vim'
+  Plug 'elixir-editors/vim-elixir'
+  Plug 'vim-ruby/vim-ruby'
+  Plug 'mileszs/ack.vim'
+  Plug 'vim-scripts/Colour-Sampler-Pack'
+  Plug 'bronson/vim-trailing-whitespace'
+call plug#end()
+
+""
+"" Mappings
+""
+
+" General mappings
+let mapleader=","
+nmap <C-Up> [e
+nmap <C-Down> ]e
+
+" NERDTree mappings
+nnoremap <leader>n :NERDTreeFocus<CR>
+
+" TagBar mappings
+nnoremap <leader>rt :TagbarToggle<CR>
+
+" Fugitive mappings
+nmap <leader>gs :Git<CR>
+nmap <leader>gb :Git blame<CR>
+nmap <leader>gd :Git diff<CR>
+nmap <leader>gl :Git log<CR>
+nmap <leader>gc :Git commit<CR>
+
+let g:snipMate = { 'snippet_version' : 1 }
+
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/]\.(git|hg|svn)$|node_modules|deps|_build',
+  \ 'file': '\v\.(exe|so|dll|pyo|rbc|rbo|class|o)$',
+  \ }
+
+""
+"" Plugins setup
+""
+
+color railscasts
