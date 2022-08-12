@@ -10,7 +10,7 @@ syntax enable         "  Turn on syntax highlighting allowing local overrides
 set splitright        "  Split windows vertically to the right
 set splitbelow        "  Split windows horizontally below the current
 set colorcolumn=80    "  Add mark when the line reaches 80 chars.
-set guifont=Menlo:h18 "  Sets font family and size
+set guifont=Menlo:h15 "  Sets font family and size
 
 ""
 "" Whitespace
@@ -81,8 +81,10 @@ nmap <leader>gd :Git diff<CR>
 nmap <leader>gl :Git log<CR>
 nmap <leader>gc :Git commit<CR>
 
+" New snippet version
 let g:snipMate = { 'snippet_version' : 1 }
 
+" CtrlP settings
 let g:ctrlp_custom_ignore = {
   \ 'dir':  '\v[\/]\.(git|hg|svn)$|node_modules|deps|_build',
   \ 'file': '\v\.(exe|so|dll|pyo|rbc|rbo|class|o)$',
