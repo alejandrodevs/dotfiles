@@ -4,7 +4,7 @@
 
 set nocompatible
 filetype plugin on
-ret number            "  Show line numbers
+set number            "  Show line numbers
 set ruler             "  Show line and column number
 syntax enable         "  Turn on syntax highlighting allowing local overrides
 set splitright        "  Split windows vertically to the right
@@ -107,6 +107,12 @@ nmap <leader>gb :Git blame<CR>
 nmap <leader>gd :Git diff<CR>
 nmap <leader>gl :Git log<CR>
 nmap <leader>gc :Git commit<CR>
+
+" Tabularize
+nmap <leader>t= :Tabularize /=<CR>
+vmap <leader>t= :Tabularize /=<CR>
+nmap <leader>t: :Tabularize /:\zs<CR>
+vmap <leader>t: :Tabularize /:\zs<CR>
 
 " New snippet version
 let g:snipMate = { 'snippet_version' : 1 }
