@@ -2,6 +2,7 @@
 "" Basic setup
 ""
 
+set noswapfile
 set nocompatible
 filetype plugin on
 set number            "  Show line numbers
